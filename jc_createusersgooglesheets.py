@@ -24,14 +24,14 @@ firstNames = [name.split(' ')[0] for name in names]
 lastNames = [name.split()[-1] for name in names]
 
 # Generates emails
-emails = [name.lower().replace(' ', '.') + '@arivo.com' for name in names]
+emails = [name.lower().replace(' ', '.') + '@COMPANYNAME.com' for name in names]
 
 # Generates usernames
 usernames = [email.split('@')[0] for email in emails]
 
 # Define the function to create user in JumpCloud
 def create_user(api_key, url, firstname, lastname, username, email, displayname):
-    password = "Red123!@#"
+    password = "PASSWORD"
     payload = {
         "activated": True,
         "displayname": displayname,
